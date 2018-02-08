@@ -113,7 +113,7 @@ ITが発展すると共に、コンピューターといかに効率よく、ス
 
 オブジェクト指向では、それぞれのクラスを合わせて、最終的に一つの大きな機能を作り出します。  
 
-### 実際にコードを書いてみよう！  
+## 実際にコードを書いてみよう！  
 
 **クラスを作る**  
 
@@ -162,7 +162,7 @@ car2 = Car.new("aqua")
 
  def initialize(carname)  
  
-    @name = carname  
+  @name = carname  
  
  end  
  
@@ -175,10 +175,9 @@ car2 = Car.new("aqua")
 
 class Car  
 
-  def initialize(carname)    
+  def initialize(carname)  
     @name = carname  
-
-end  
+  end  
   
   def put_name  
     puts "This is #{@name}"    
