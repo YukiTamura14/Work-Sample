@@ -113,10 +113,12 @@ ITが発展すると共に、コンピューターといかに効率よく、ス
 
 オブジェクト指向では、それぞれのクラスを合わせて、最終的に一つの大きな機能を作り出します。  
 
-###　実際にコードを書いてみよう！
+### 実際にコードを書いてみよう！  
+
 **クラスを作る**  
 
-class Car  
+class Car  
+
 end  
 
 <メモ>  
@@ -126,6 +128,7 @@ end
 **次にclass Carとendの間にメソッドを定義します。**  
 
 class Car  
+
   def initialize(carname)  
     @name = carname  
   end  
@@ -133,8 +136,11 @@ class Car
   def put_name  
     puts "This is #{@name}"  
   end  
+  
 end  
+
 <メモ>  
+
 - メソッドは、defの後に任意で決めたメソッドの名前を書きます。  
 - endで逐一閉じます。  
 - defとendの間に、メソッドの具体的な働きを定義します。  
@@ -143,44 +149,57 @@ end
 **最後に、インスタンスを作ります。**  
 
 car1 = Car.new("prius")  
+
 car2 = Car.new("aqua")  
 
-<メモ>
+<メモ>  
+
 - インスタンスはクラス名とnewメソッドを使って作ります。  
-- ("　")で、インスタンスに独自の名前を渡しています(名札のようなもの)。ただ、インスタンスは名前を渡されても、このままではキープできません。
-　それを可能にしているのが、initializeメソッドです。
+- ("　")で、インスタンスに独自の名前を渡しています(名札のようなもの)。ただ、インスタンスは名前を渡されても、このままではキープできません。  
+それを可能にしているのが、initializeメソッドです。
 
 **initializeメソッドとは？**  
 
  def initialize(carname)  
+ 
     @name = carname  
-  end  
+ 
+ end  
  
 - @nameは、インスタンスがcarnameを保持するための箱の役割を担っています。  
 - @をつけることで、class内ならどこからでも呼び出せます。  
-- initializeメソッドは、インスタンスを作っているnewメソッドが呼ばれるたびに働き、**値を初期値(ここでの初期値はcarname)に戻して、それぞれのインスタンスに渡した独自の名前を呼び出すことを可能にしています。**（ストップウォッチのカウンターをリセットして00に戻す、別の処理がされていたものをスタート値に戻すというようなイメージです。）
+- initializeメソッドは、インスタンスを作っているnewメソッドが呼ばれるたびに働き、**値を初期値(ここでの初期値はcarname)に戻して、それぞれのインスタンスに渡した独自の名前を呼び出すことを可能にしています。**  
+（ストップウォッチのカウンターをリセットして00に戻す、別の処理がされていたものをスタート値に戻すというようなイメージです。）
 
 <まとめ>  
 
-class Car    
+class Car  
+
   def initialize(carname)    
     @name = carname  
-  end  
+
+end  
   
   def put_name  
     puts "This is #{@name}"    
   end  
-end  
+  
+end    
 
 car1 = Car.new("prius")  
+
 car2 = Car.new("aqua")  
 
 car1.put_name  
+
 car2.put_name  
 
 ====画面上の表示====  
+
 This is prius  
+
 This is aqua  
+
 
 ---
 
