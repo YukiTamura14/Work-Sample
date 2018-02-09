@@ -115,19 +115,22 @@ ITが発展すると共に、コンピューターといかに効率よく、ス
 
 ## 実際にコードを書いてみよう！  
 
-**クラスを作る**  
+**クラスを作る**  
 
-class Car  
+``` 
+class Car  
 
-end  
+end  
+``` 
 
-<メモ>  
+<メモ>  
 - クラス名は大文字ではじめます。また、数字から始めることはできません。  
 - endで閉じます。  
 
-**次にclass Carとendの間にメソッドを定義します。**  
+**次にclass Carとendの間にメソッドを定義します。**  
 
-class Car  
+``` 
+class Car  
 
   def initialize(carname)  
     @name = carname  
@@ -137,42 +140,43 @@ class Car
     puts "This is #{@name}"  
   end  
   
-end  
-
-<メモ>  
+end  
+``` 
+<メモ>  
 
 - メソッドは、defの後に任意で決めたメソッドの名前を書きます。  
 - endで逐一閉じます。  
 - defとendの間に、メソッドの具体的な働きを定義します。  
 - initializeメソッドに関しては、後ほど記述します。
 
-**最後に、インスタンスを作ります。**  
+**最後に、インスタンスを作ります。**  
+``` 
+car1 = Car.new("prius")  
 
-car1 = Car.new("prius")  
-
-car2 = Car.new("aqua")  
-
-<メモ>  
+car2 = Car.new("aqua")  
+``` 
+<メモ>  
 
 - インスタンスはクラス名とnewメソッドを使って作ります。  
 - ("　")で、インスタンスに独自の名前を渡しています(名札のようなもの)。ただ、インスタンスは名前を渡されても、このままではキープできません。  
 それを可能にしているのが、initializeメソッドです。
 
 **initializeメソッドとは？**  
-
- def initialize(carname)  
+```  
+ def initialize(carname)  
  
   @name = carname  
  
- end  
- 
+ end  
+```  
+
 - @nameは、インスタンスがcarnameを保持するための箱の役割を担っています。  
 - @をつけることで、class内ならどこからでも呼び出せます。  
 - initializeメソッドは、インスタンスを作っているnewメソッドが呼ばれるたびに働き、**値を初期値(ここでの初期値はcarname)に戻して、それぞれのインスタンスに渡した独自の名前を呼び出すことを可能にしています。**  
 （ストップウォッチのカウンターをリセットして00に戻す、別の処理がされていたものをスタート値に戻すというようなイメージです。）
 
 <まとめ>  
-
+``` 
 class Car  
 
   def initialize(carname)  
@@ -192,7 +196,7 @@ car2 = Car.new("aqua")
 car1.put_name  
 
 car2.put_name  
-
+``` 
 ====画面上の表示====  
 
 This is prius  
