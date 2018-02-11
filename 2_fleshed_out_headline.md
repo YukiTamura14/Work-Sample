@@ -129,7 +129,7 @@ end  
 
 **次にclass Carとendの間にメソッドを定義します。**  
 
-``` 
+```ruby   
 class Car  
 
   def initialize(carname)  
@@ -150,7 +150,7 @@ end  
 - initializeメソッドに関しては、後ほど記述します。
 
 **最後に、インスタンスを作ります。**  
-``` 
+```ruby  
 car1 = Car.new("prius")  
 
 car2 = Car.new("aqua")  
@@ -162,7 +162,7 @@ car2 = Car.new("aqua")  
 それを可能にしているのが、initializeメソッドです。
 
 **initializeメソッドとは？**  
-```  
+```ruby    
  def initialize(carname)  
  
   @name = carname  
@@ -176,7 +176,7 @@ car2 = Car.new("aqua")  
 （ストップウォッチのカウンターをリセットして00に戻す、別の処理がされていたものをスタート値に戻すというようなイメージです。）
 
 <まとめ>  
-``` 
+```ruby   
 class Car  
 
   def initialize(carname)  
